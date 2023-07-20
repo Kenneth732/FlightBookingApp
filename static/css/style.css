@@ -35,3 +35,10 @@ body {
     justify-content: center;
   }
   
+  input[type="text"], input[type="date"], button {
+    padding: 0.7rem;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
