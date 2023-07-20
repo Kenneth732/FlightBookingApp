@@ -56,3 +56,19 @@ function filterFlights(origin, destination, departureDate) {
   );
   return filteredFlights;
 }
+
+// Event listener for the search form
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const origin = document.getElementById("origin").value;
+  const destination = document.getElementById("destination").value;
+  const departureDate = document.getElementById("departureDate").value;
+
+  const filteredFlights = filterFlights(origin, destination, departureDate);
+
+  if (filteredFlights.length > 0) {
+    displayFlights(filteredFlights);
+  } else {
+    resultsSection.innerHTML = "<p>No flights found for the selected criteria.</p>";
+  }
+});
