@@ -72,3 +72,12 @@ searchForm.addEventListener("submit", (e) => {
     resultsSection.innerHTML = "<p>No flights found for the selected criteria.</p>";
   }
 });
+
+// Event listener for the "Book Now" button (This is a simplified version and does not include actual booking)
+resultsSection.addEventListener("click", (e) => {
+  if (e.target.classList.contains("book-btn")) {
+    const flightIndex = e.target.dataset.flightIndex;
+    const selectedFlight = flightsData[flightIndex];
+    alert(`You have booked Flight ${flightIndex + 1} from ${selectedFlight.origin} to ${selectedFlight.destination}.`);
+  }
+});
