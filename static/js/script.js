@@ -22,3 +22,26 @@ const flightsData = [
   },
   // Add more flight data
 ];
+
+// Function to display the flight results
+function displayFlights(flights) {
+  const flightsList = document.getElementById("flightsList");
+  flightsList.innerHTML = "";
+
+  flights.forEach((flight, index) => {
+    const flightItem = document.createElement("div");
+    flightItem.classList.add("flight-item");
+    flightItem.innerHTML = `
+      <h3>Flight ${index + 1}</h3>
+      <p><strong>Origin:</strong> ${flight.origin}</p>
+      <p><strong>Destination:</strong> ${flight.destination}</p>
+      <p><strong>Departure Date:</strong> ${flight.departureDate}</p>
+      <p><strong>Airline:</strong> ${flight.airline}</p>
+      <p><strong>Price:</strong> $${flight.price}</p>
+      <p><strong>Seats Available:</strong> ${flight.seatsAvailable}</p>
+      <button class="book-btn" data-flight-index="${index}">Book Now</button>
+    `;
+    flightsList.appendChild(flightItem);
+  });
+}
+
