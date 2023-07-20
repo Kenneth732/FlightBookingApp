@@ -46,4 +46,16 @@ body {
     width: 100%;
     max-width: 200px;
   }
- 
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
