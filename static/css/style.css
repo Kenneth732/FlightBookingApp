@@ -65,3 +65,16 @@ body {
     border-radius: 4px;
   }
   
+  .flight-item {
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+  }
+  
+  .flight-item p {
+    margin: 0;
+    padding: 0.3rem 0;
+  }
+  
