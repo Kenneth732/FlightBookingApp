@@ -19,6 +19,14 @@ const flightsData = [
     airline: "United Airlines",
     price: 280,
     seatsAvailable: 120,
-  },
+  }
 ];
+
+// Function to display the flight results
+function displayFlights(flights) {
+  const flightsList = document.getElementById("flightsList");
+  flightsList.innerHTML = "";
+
+
+}
 
