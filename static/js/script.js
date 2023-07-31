@@ -44,3 +44,14 @@ function displayFlights(flights) {
   });
 }
 
+// Function to filter flights based on search criteria
+function filterFlights(origin, destination, departureDate) {
+  // Simulate filtering based on the sample data
+  const filteredFlights = flightsData.filter(
+    (flight) =>
+      flight.origin.toLowerCase().includes(origin.toLowerCase()) &&
+      flight.destination.toLowerCase().includes(destination.toLowerCase()) &&
+      flight.departureDate === departureDate
+  );
+  return filteredFlights;
+}
